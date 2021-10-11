@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--无参构造注册-->
+<!--    <bean id="user" class="com.yihan.pojo.User">-->
+<!--        <property name="name" value="yihan"/>-->
+<!--    </bean>-->
+    <!-- 有参构造注册index-->
+<!--    <bean id="user" class="com.yihan.pojo.User">-->
+<!--        <constructor-arg index="0" value="yihan"/>-->
+<!--    </bean>-->
+    <!-- 有参构造注册 类型-->
+    <bean id="user" class="com.yihan.pojo.User">
+        <constructor-arg type="java.lang.String" value="yihan best!"/>
+    </bean>
+<!--    &lt;!&ndash; 有参构造注册 直接通过参数名&ndash;&gt;-->
+<!--    <bean id="user" class="com.yihan.pojo.User">-->
+<!--        <constructor-arg name="name" value="yihan best"/>-->
+<!--    </bean>-->
+
+    <bean id="userT" class="com.yihan.pojo.UserT">
+    </bean>
+    <!-- 别名配置-->
+<!--    <alias name="user" alias="userAlia"/>-->
+
+    <!--
+    id: bean的唯一标识符，相当于我们学的对象名
+    class： bean 对象所对应的全限定名 包名+类型
+    name：也是别名，name可以同时取多个名字
+    -->
+
+
+</beans>
